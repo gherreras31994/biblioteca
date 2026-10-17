@@ -1,0 +1,18 @@
+name: Pruebas Cypress
+on: [push, pull_request]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cypress-io/github-action@v7
+        with:
+          start: npm start
+          wait-on: "http://localhost:3000"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: evidencia-cypress
+          path: |
+            cypress/videos
+            cypress/screenshots

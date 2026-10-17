@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Organiza los libros y las copias de tu biblioteca.">
+  <title>Gestor de Biblioteca</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="cabecera"><a href="/" class="marca"><span class="icono" aria-hidden="true">B</span> Biblioteca<span class="marca-detalle"> / colección personal</span></a><span class="etiqueta">Gestor de libros</span></header>
+  <main>
+    <section id="login" class="entrada">
+      <div class="presentacion"><span class="ceja">UN LUGAR PARA CADA HISTORIA</span><h1>Tu próxima lectura<br>empieza aquí.</h1><p>Organiza tu colección, registra tus libros y mantén sus copias al día. Todo en un mismo lugar.</p><div class="libros" aria-hidden="true"><span>HISTORIAS</span><span>BIBLIOTECA</span><span>IDEAS</span></div></div>
+      <div class="tarjeta acceso"><span class="ceja">BIENVENIDO</span><h2>Entra a tu biblioteca</h2><p>Inicia sesión para administrar tu colección.</p><form id="form-login" novalidate><label for="usuario">Usuario</label><input id="usuario" autocomplete="username" placeholder="Tu usuario"><label for="clave">Contraseña</label><input id="clave" type="password" autocomplete="current-password" placeholder="Tu contraseña"><p id="login-msg" class="error" role="alert"></p><button id="btn-login" type="submit">Entrar a la biblioteca <span aria-hidden="true">→</span></button></form><p class="nota">Acceso de práctica: <strong>admin</strong> / <strong>admin123</strong></p></div>
+    </section>
+    <section id="panel" class="oculto">
+      <div class="titulo-panel"><div><span class="ceja">TU ESPACIO DE LECTURA</span><h1>Mi biblioteca</h1><p>Pequeñas colecciones, grandes historias.</p></div><button id="btn-salir" class="secundario">Cerrar sesión</button></div>
+      <div class="distribucion"><section class="tarjeta nuevo"><span class="ceja">AMPLÍA TU COLECCIÓN</span><h2>Agregar un libro</h2><form id="form-libro" novalidate><label for="titulo">Título</label><input id="titulo" placeholder="Ej. Cien años de soledad"><label for="autor">Autor</label><input id="autor" placeholder="Nombre del autor"><label for="copias">Copias</label><input id="copias" type="number" step="1" placeholder="Cantidad disponible"><p id="form-msg" class="error" role="alert"></p><button id="btn-agregar" type="submit">+ Agregar libro</button></form></section>
+      <section class="tarjeta coleccion"><div class="coleccion-titulo"><h2>Tu colección</h2><span id="contador" class="etiqueta" aria-live="polite">0 libros</span></div><div class="tabla-contenedor"><table><thead><tr><th>Título</th><th>Autor</th><th>Copias</th><th><span class="sr-only">Acciones</span></th></tr></thead><tbody id="libros"></tbody></table></div><div id="vacio" class="vacio"><span aria-hidden="true">▤</span><h3>Una colección por descubrir</h3><p>Agrega tu primer libro con el formulario.<br>Cada historia cuenta.</p></div></section></div>
+    </section>
+  </main>
+  <footer>Gestor de Biblioteca <span>Hecho para cuidar tus historias.</span></footer>
+</body>
+</html>

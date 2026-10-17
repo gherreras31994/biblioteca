@@ -1,0 +1,12 @@
+{
+  "name": "biblioteca",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gestor de Biblioteca: practica de Cypress y Pull Requests en equipo",
+  "scripts": {
+    "start": "http-server public -p 3000",
+    "test": "cypress run",
+    "cypress:open": "cypress open"
+  },
+  "devDependencies": { "cypress": "13.17.0", "http-server": "14.1.1" }
+}
