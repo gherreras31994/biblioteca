@@ -2,6 +2,10 @@
 
 Práctica de Cypress y Pull Requests en equipo. Integrante 1: **gherreras31994**.
 
+Aplicación publicada: https://gherreras31994.github.io/biblioteca/
+GitHub Pages publica el contenido de `public` al actualizar `main`.
+Los libros se guardan por navegador y dispositivo; no se comparten entre usuarios.
+
 - [Repositorio](https://github.com/gherreras31994/biblioteca)
 - [GitHub Actions](https://github.com/gherreras31994/biblioteca/actions)
 - [Pull Requests](https://github.com/gherreras31994/biblioteca/pulls)
