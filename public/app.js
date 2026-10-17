@@ -69,10 +69,6 @@ elemento('form-libro').addEventListener('submit', (evento) => {
     return;
   }
   // VALIDACION DE COPIAS: bloque de trabajo para los roles falla y arreglo.
-  if (!Number.isInteger(copias) || copias <= 0) {
-    mensaje.textContent = 'Las copias deben ser un entero mayor que cero.';
-    return;
-  }
   libros.push({ id: crypto.randomUUID(), titulo, autor, copias });
   guardar();
   render();
